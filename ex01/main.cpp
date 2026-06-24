@@ -11,42 +11,48 @@
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int main()
 {
 	try
 	{
-		Bureaucrat it("hugo", 2);
-		std::cout << it << std::endl;
-		it.incrementGrade();
-		std::cout << it << std::endl;
-		it.incrementGrade();
+		Bureaucrat  it( "hugo", 100 );
+		Form		contract( "Contract", 100, 50 );
+		
+		std::cout	<< "before signing: "
+					<< it 
+					<< std::endl;
+		
+		it.signForm( contract );
+		
 	}
-	catch (std::exception& e)
+	catch(const std::exception& e)
 	{
-		std::cerr << "Exception caught: " << e.what() << std::endl;
+		std::cout << e.what() << '\n';
 	}
 	
-	try 
+	try
 	{
-		Bureaucrat it("hugo", 200);
-		std::cout << it << std::endl;
+		Bureaucrat  it( "hugo", 6 );
+		Form		contract( "contract", 5, 1 );
+		
+		std::cout	<< "before increment: "
+					<< contract
+					<< "\nb: " << it
+					<< std::endl;
+		it.signForm( contract );
+		
+		it.incrementGrade();
+		
+		std::cout	<< "after increment: "
+					<< contract
+					<< "\nb: " << it
+					<< std::endl;
+		it.signForm( contract );
 	}
-	catch (std::exception& e)
+	catch(const std::exception& e)
 	{
-		std::cerr << "Exception caught: " << e.what() << std::endl;
-	}
-
-	try 
-	{
-		Bureaucrat it("hugo", 149);
-		std::cout << it << std::endl;
-		it.decrementGrade();
-		it.decrementGrade();
-		std::cout << it << std::endl;
-	}
-	catch (std::exception& e)
-	{
-		std::cerr << "Exception caught: " << e.what() << std::endl;
+		std::cout << e.what() << '\n';
 	}
 }
