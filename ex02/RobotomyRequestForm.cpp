@@ -6,7 +6,7 @@
 /*   By: hgutterr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/06 14:37:42 by hgutterr          #+#    #+#             */
-/*   Updated: 2026/07/07 02:08:06 by hgutterr         ###   ########.fr       */
+/*   Updated: 2026/07/07 15:55:05 by hgutterr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	RobotomyRequestForm::execute( Bureaucrat const & executor ) const
 	std::cout	<< "*drilling noises*"
 				<< std::endl;
 	
-	if(rand() % 2)
+	if(std::rand() % 2)
 	{
 		std::cout	<< this->getTarget()
 					<< " has been robotomized."

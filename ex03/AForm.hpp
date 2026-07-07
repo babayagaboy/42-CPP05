@@ -6,7 +6,7 @@
 /*   By: hgutterr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/06 14:34:27 by hgutterr          #+#    #+#             */
-/*   Updated: 2026/07/07 02:28:30 by hgutterr         ###   ########.fr       */
+/*   Updated: 2026/07/07 16:01:28 by hgutterr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ class AForm {
 		AForm( std::string name , int gradeToSign, int gradeToExec );
 		AForm( const AForm& other );
 		AForm& operator=( const AForm& other );
-		virtual ~AForm( void );
+		virtual ~AForm( void ) = 0;
 
 		std::string	getName( void ) const;
 		bool		getIsSigned( void ) const;

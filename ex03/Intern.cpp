@@ -58,7 +58,7 @@ AForm*	Intern::makeForm( const std::string name, const std::string target)
 	switch (i)
 	{
 		case 0:
-			return( new ShrubberyCreationForm(target));
+			return(new ShrubberyCreationForm(target));
 		case 1:
 			return(new RobotomyRequestForm(target));
 		case 2:

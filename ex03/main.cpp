@@ -21,41 +21,40 @@ int main ()
 	try
 		{
 			Bureaucrat boss("Boss", 1);
-			Intern someRandomIntern;
-			AForm* rrf;
+			Intern intern;
+			AForm* form;
 
-			std::cout << "--- Intern Creates Shrubbery Form ---" << std::endl;
-			rrf = someRandomIntern.makeForm("shrubbery creation", "Bender");
-			if (rrf)
+			std::cout << "trying to create shrubbery form" << std::endl;
+			form = intern.makeForm("shrubbery creation", "Bender");
+			if (form)
 			{
-				boss.signForm(*rrf);
-				boss.executeForm(*rrf);
-				delete rrf;
+				boss.signForm(*form);
+				boss.executeForm(*form);
+				delete form;
 			}
 
-			std::cout << "\n--- Intern Creates Robotomy Form ---" << std::endl;
-			rrf = someRandomIntern.makeForm("robotomy request", "Wall-E");
-			if (rrf)
+			std::cout << "trying to create robotomy request" << std::endl;
+			form = intern.makeForm("robotomy request", "Wall-E");
+			if (form)
 			{
-				boss.signForm(*rrf);
-				boss.executeForm(*rrf);
-				delete rrf;
+				boss.signForm(*form);
+				boss.executeForm(*form);
+				delete form;
+			}
+			std::cout << "trying to create presidential pardon" << std::endl;
+			form = intern.makeForm("presidential pardon", "Marvin");
+			if (form)
+			{
+				boss.signForm(*form);
+				boss.executeForm(*form);
+				delete form;
 			}
 
-			std::cout << "\n--- Intern Creates Pardon Form ---" << std::endl;
-			rrf = someRandomIntern.makeForm("presidential pardon", "Marvin");
-			if (rrf)
+			std::cout << "trying to create an invalid form" << std::endl;
+			form = intern.makeForm("coffee request", "Boss");
+			if (form)
 			{
-				boss.signForm(*rrf);
-				boss.executeForm(*rrf);
-				delete rrf;
-			}
-
-			std::cout << "\n--- Intern Creates Invalid Form ---" << std::endl;
-			rrf = someRandomIntern.makeForm("coffee request", "Boss");
-			if (rrf)
-			{
-				delete rrf;
+				delete form;
 			}
 		}
 		catch (std::exception const &e)

@@ -16,11 +16,12 @@ int main()
 {
 	try
 	{
-		Bureaucrat it("hugo", 2);
+		Bureaucrat it("hugo", 3);
 		std::cout << it << std::endl;
 		it.incrementGrade();
 		std::cout << it << std::endl;
 		it.incrementGrade();
+		std::cout << it << std::endl;
 	}
 	catch (std::exception& e)
 	{

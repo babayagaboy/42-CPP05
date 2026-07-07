@@ -14,9 +14,12 @@
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
+#include <ctime>
+
 
 int main ()
 {
+	std::srand(std::time(NULL));
 	{
 		try
 		{
@@ -40,17 +43,9 @@ int main ()
 	{
 		Bureaucrat boss("Boss", 1);
 		Bureaucrat assistant("Assistant", 45);
-		Bureaucrat intern("Intern", 150);
 
-		ShrubberyCreationForm shrub("home");
 		RobotomyRequestForm robot("Bender");
 		PresidentialPardonForm pardon("Fry");
-
-		std::cout << "--- Shrubbery Tests ---" << std::endl;
-		intern.executeForm(shrub);
-		assistant.signForm(shrub);
-		intern.executeForm(shrub);
-		assistant.executeForm(shrub);
 
 		std::cout << "\n--- Robotomy Tests ---" << std::endl;
 		assistant.signForm(robot);
