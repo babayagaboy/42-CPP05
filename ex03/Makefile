@@ -20,7 +20,8 @@ SRCS		=	main.cpp \
 				AForm.cpp \
 				PresidentialPardonForm.cpp \
 				RobotomyRequestForm.cpp \
-				ShrubberyCreationForm.cpp
+				ShrubberyCreationForm.cpp \
+				Intern.cpp
 
 OBJDIR		= obj
 OBJS		= $(SRCS:%.cpp=$(OBJDIR)/%.o)
