@@ -64,6 +64,10 @@ int	Form::getGradeToExec( void ) const {
 	return(this->_gradeToExec);
 }
 
+bool Form::getIsSigned( void ) const {
+	return(this->_isSigned);
+}
+
 void	Form::beSigned( Bureaucrat& b )
 {
 	if(b.getGrade() <= this->_gradeToSign)

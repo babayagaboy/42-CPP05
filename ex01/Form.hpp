@@ -44,8 +44,9 @@ class Form {
 		~Form( void );
 
 		std::string	getName( void ) const;
-		int	getGradeToSign( void ) const;
-		int	getGradeToExec( void ) const;
+		bool		getIsSigned( void ) const;
+		int			getGradeToSign( void ) const;
+		int			getGradeToExec( void ) const;
 
 		void		beSigned( Bureaucrat& b );
 };
