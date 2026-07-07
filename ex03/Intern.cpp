@@ -53,6 +53,7 @@ AForm*	Intern::makeForm( const std::string name, const std::string target)
 			std::cout	<< "Intern creates "
 						<< name
 						<< std::endl;
+			break;
 		}
 	}
 	switch (i)
